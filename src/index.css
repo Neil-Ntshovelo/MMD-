@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-cyan-700 text-white px-6 py-2.5 rounded-xl font-semibold hover:bg-cyan-800
+           transition-all duration-200 shadow-md hover:shadow-lg active:scale-95;
+  }
+  .btn-outline-white {
+    @apply border-2 border-white/70 text-white px-6 py-2.5 rounded-xl font-semibold
+           hover:bg-white hover:text-cyan-700 transition-all duration-200;
+  }
+  .section-label {
+    @apply inline-block bg-cyan-50 text-cyan-700 text-xs font-bold px-4 py-1.5
+           rounded-full mb-4 tracking-widest uppercase;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  .dropdown-item {
+    @apply block text-slate-700 hover:text-cyan-600 transition-all duration-200;
+  }
+}
+
+/* slick-carousel dot styles */
+.slick-dots li button:before {
+  color: #0e7490 !important;
+  font-size: 8px !important;
+}
+.slick-dots li.slick-active button:before {
+  color: #0e7490 !important;
+  opacity: 1 !important;
+}

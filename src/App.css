@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Component Styles */
+@layer components {
+  .nav-link {
+    @apply text-gray-700 font-semibold hover:text-cyan-700 transition duration-300;
+  }
+
+  .dropdown-item {
+    @apply block text-gray-700 hover:text-cyan-600 hover:pl-2 transition duration-300;
+  }
+}
